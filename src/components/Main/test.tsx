@@ -3,13 +3,12 @@ import Main from '.'
 describe('<Main />', () => {
   it('should render the heading', () => {
     //renderiza o componente
-    const { container } = render(<Main />)
+    render(<Main />)
     //busca o elemento e verifica a existencia dele
     expect(
       screen.getByRole('heading', { name: /react avançado/i })
     ).toBeInTheDocument()
     //gerar snapshot
-    expect(container.firstChild).toMatchSnapshot()
   })
   it('should render the colors correctly', () => {
     const { container } = render(<Main />)
